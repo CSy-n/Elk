@@ -1,2 +1,115 @@
 
- Elk is a Text Editor 
+
+
+Elk is a basic text-editor; it seeks to emulate certain Emacs' and Vi-like keybindings, for
+navigation and editing of text. It seeks to be comparable to other editors, like
+ *nano*.
+
+--------------------------------------------------------------------------------
+
+ + Seeks to be similar to Vim or Emacs, but not in terms of extensability.
+  If you are looking for a Emacs/Vim alternative, see: *Ent*
+
+ + But not an emacs' altnernative -- see *Ent* for emacs' derivative.
+
+* Goals
+
+- Terminal based
+- Basic Themes
+- Syntax Highlighting for Most Languages
+- Plugins for alternate Keybindings
+
+
+* Concepts
+ Buffer, Modeline, Visited-File, Cursor, Display, Font/Face
+ Keymap, Operations (editing) 
+
+
+
+
+* Discovering the Keybindings
+
+The process of attaining a decent keybinding setup, is the majority of the work in this project.
+There are many possible layouts, with many different advantages.
+
+** Process of Discovery
+
+ - Trial and Error
+ - compare between existing keybinding setups: e.g Vi/Emacs
+ - apply statistical knowledge of operations
+ - populus consideration (user-base preference for a certain layout)
+
+A keybinding for basic navigation is chosen by default; its reasoning is below.
+ see *Reason for Navigation Keys*.
+
+
+** Obtaining Command Statstics
+...
+
+
+** Reason For Default Navigation Keys
+
+I found that emacs' keybindings were suboptimal for the kinds of *programming* tasks
+ I was interested in; namely writing, editing, exploring, and refactoring code.
+ I was most in most interested in developing in Lisp based language. A Markdown language,
+ known as Org mode in emacs', and common operations in alternate languages.
+
+ I thought about Vim-Modal editing, which seemed like an appropriate manifestation;
+ but I thought the default navigation bindings (HJKL) were misconfiguring. 
+
+ I thought immediately about WASD a natural fit - but it felt wrong aswell (Wrong hand).
+
+ I thought about IJKL, which seemed like a nice fit, but it felt slightly misconfigured.
+ I compromised with OKL; it felt more natural, and was closer to the <RET> (Enter key).
+
+ I thought this would be a good start.
+ 
+
+
+* The Keybindings 
+
+Elm's keyboard bindings are based on statistics of common editing operations,
+with a layout similar to *Vi* .
+
+
+- Simple Navigation and editing Features
+  - Navigation
+
+Primitive Cursor Navigation
+#+BEGIN_SRC emacs-lisp
+
+(
+:cursor-foward:       "o"
+:cursor-backward:     "k" 
+:cursor-next-line:    "l"
+:cursor-previous-line ";"
+)
+
+#+END_SRC
+
+- Simulate Buffers for multiple files
+
+
+ o => UP
+ k => DOWN
+ j => LEFT
+ ; => RIGHT
+ 
+ e => EDIT-MODE
+
+
+
+
+
+
+* References
+
+
+ + Method of finding Text Editors:
+ https://lib.rs/text-editors
+
+- https://github.com/rhysd/kiro-editor
+----------------------------------------
+- https://github.com/jmacdonald/amp
+- https://github.com/gchp/iota
+- https://github.com/hatoo/accepted
