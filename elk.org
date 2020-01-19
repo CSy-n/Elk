@@ -43,6 +43,56 @@ A keybinding for basic navigation is chosen by default; its reasoning is below.
  see *Reason for Navigation Keys*.
 
 
+
+** Common Editing Operations
+   
+- forward-word
+- backward-word
+- beginning-of-line
+- end-of-line
+
+- forward-sentence
+- backward-sentence
+- indent-region
+
+- isearch-forward
+- isearch-backward
+- query-replace
+
+- org-yank       :: Paste Text
+- kill-region    :: Cut   text
+- kill-ring-save :: Copy  text
+
+- delete-char
+- backward-kill-word
+
+- mark-word      :: Mark current *word* 
+- mark-paragraph :: Mark current *paragraph* of text
+
+*** Primitive Navigation
+forward-word
+backward-word
+beginning-of-line
+end-of-line
+
+*** Semantic Navigation
+forward-sentence
+backward-sentence
+indent-region
+
+*** Search-Navigation
+isearch-forward
+isearch-backward
+
+
+*** Text Operations
+query-replace
+
+
+
+
+
+
 ** Obtaining Command Statstics
 ...
 
